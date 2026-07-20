@@ -1,0 +1,35 @@
+CHANNEL - NAMASTE JAVASCRIPT VIDEO 2
+
+
+JAVASCRIPT
+
+is a synchronous single threaded language ( means line by line execute hota hai first line execute hote hi next pr jaayega )
+execution context having 2 components:
+   1. memory component (called as variable environment)  - contains variables and  function as key value pair
+   2. code component (called as thread of execution ) - contain whole js code
+
+
+--Call stack maintains the ORDER OF EXECUTION of execution contexts
+  it is also called :- 
+     execution context stack 
+     program stack
+     control stack
+     runtime stack
+     machine stack
+
+--- variable and function ko unke declaration se PEHLE use kiya gaya hai, phir bhi ye crash nahi karta, iska naam hai Hoisting.
+
+    Normally lagega ki error aayegi kyunki x aur getName abhi tak "bane" hi nahi the jab unhe use kiya gaya. Lekin JS mein error nahi aati — kyunki JavaScript ek special cheez karta hai jise Hoisting kehte hain.
+
+
+✌ Rules
+
+1. Functions poore hoist hote hain
+function getName() {...} — pura function upar chala jaata hai, isliye getName() ko call karna kaam kar gaya, chahe wo code mein neeche likha ho.
+
+2. var variables sirf "declaration" hoist hoti hai, value nahi
+var x upar chala gaya (empty box ki tarah), lekin x = 7 (value assign karna) apni jagah pe hi raha. Isliye jab console.log(x) chala, x ka box tha lekin usme abhi koi value nahi thi — isliye undefined print hua.
+
+key points 
+Function declarations → pura hoist hota hai → pehle bhi call kar sakte ho
+var variables → sirf naam hoist hota hai, value nahi → pehle use karoge toh undefined milega
