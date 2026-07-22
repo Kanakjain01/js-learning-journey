@@ -37,15 +37,15 @@
 // console.log(getName);
 
 // ------------------ given 'x'value is undefined because of hoisting, function declaration is hoisted to the top of the scope, so it can be called before its definition. However, variable declarations are also hoisted but not their assignments, so 'x' is undefined when logged before its assignment.
-getName();
-console.log(x);
-console.log(getName);
+// getName();
+// console.log(x);
+// console.log(getName);
 
-var x = 7;
+// var x = 7;
 
-function getName() {
-  console.log("namaste Js");
-}
+// function getName() {
+//   console.log("namaste Js");
+// }
 
 //----------------------x is not present in the global scope, so it will throw a ReferenceError(or is not defined) when trying to log it before its declaration. However, function declarations are hoisted, so getName can be called before its definition.
 // getName();
@@ -79,3 +79,16 @@ function getName() {
 // var getName = () => {
 //   console.log("namaste Js");
 // };
+
+// -------------------
+getName();
+console.log(x);
+
+console.log(getName);
+
+var x = 7;
+
+var getName2 = function () {};
+var getName = () => {
+  console.log("namaste Js");
+};
