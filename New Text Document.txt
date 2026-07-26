@@ -34,3 +34,92 @@ var x upar chala gaya (empty box ki tarah), lekin x = 7 (value assign karna) apn
 key points
 Function declarations → pura hoist hota hai → pehle bhi call kar sakte ho
 var variables → sirf naam hoist hota hai, value nahi → pehle use karoge toh undefined milega
+
+
+
+
+
+--------------------------------------------
+
+this === window means 
+
+Jab aap global scope mein (kisi function ke andar nahi, seedha file ke top level pe) likhte ho:
+
+javascript
+console.log(this);
+
+Toh output aata hai window object. Matlab global level pe, this aur window same cheez ko point karte hain.
+
+
+example: 
+var name = "Test";
+
+// Ye sab same cheez ko access kar rahe hain:
+console.log(name);         // Test
+console.log(window.name);  // Test
+console.log(this.name);    // Test
+
+Teeno exactly same value print karenge kyunki:
+
+name global var hai → window ka property ban gaya
+this global scope mein window ke barabar hai
+Isliye this.name = window.name = name
+
+
+------------------------------------------
+// JS Ka Shortest Program
+
+// Shortest program matlab — agar aap ek bilkul khaali JS file bhi banate ho(kuch bhi likhe bina), tab bhi JavaScript engine kuch background mein automatically kar deta hai.
+// Isme kuch bhi code na hone ke bawajood, JS engine khud se do cheezein bana deta hai:
+
+// 1.Global Execution Context (GEC) create karta hai — ye ek "base environment" hai jaha poora code run hota hai
+// 2. window object create karta hai (agar browser mein chal raha ho)
+// 3. this keyword ko global object(window) se link kar deta hai
+
+
+
+
+// window:- ek bada container/box hai jisme:
+
+// Saari global variables (jo var se bane) store hoti hain
+// Saare global functions store hote hain
+// Bahut saare built -in browser features hote hain(jaise alert(), console, document, location, etc.)
+
+
+
+
+
+// Browser console mein try karo: sirf window type karke enter dabao — ek bahut bada object dikhega jisme built-in properties/methods (alert, document, console, location, etc.) already maujood hain
+// Ye sab JS engine + browser already provide karte hain, aapko banane ki zaroorat nahi
+
+
+
+
+
+// this Se
+
+// Global scope mein (kisi function ke andar nahi), agar aap likho:
+
+// javascript
+// console.log(this);
+
+// Output aayega: window object (browser mein). Matlab global level pe this aur window same cheez ko point karte hain.
+
+
+
+// var x = 7;
+
+// function sayHi() {
+//   console.log("Hi!");
+// }
+
+
+
+
+
+// console.log(this);
+
+
+
+
+// imp note : Ye behavior sirf var ke saath hota hai. Jab aap aage let aur const seekhoge, toh dekhoge ki wo window object mein automatically attach nahi hote — ye ek bada difference hai var vs let/const ke beech, jo aage clear hoga.
