@@ -3,14 +3,19 @@
 // // Global variables ko avoid karna chahiye kyunki ye code ko complex aur difficult to maintain bana dete hai.
 
 // global space called global scope.it is accessible from anywhere in the code
- 
-// A global space is the environment or memory area where global items live, while a global variable is a specific named data item stored inside that space.
 
+// A global space is the environment or memory area where global items live, while a global variable is a specific named data item stored inside that space.
 
 var a = 10; // global variable
 function b() {
-    var x = 10; // local variable
+  var x = 10; // local variable
 }
 console.log(window.a); // 10
 console.log(a); // 10
-console.log(x); // ReferenceError: x is not defined
+// console.log(x); // ReferenceError: x is not defined
+console.log(this.a);
+// console.log(window); // window object
+
+// Type                         	Access Kaha Se Ho Sakta Hai
+// Global variable (a)       	Kahin se bhi — global, function ke andar, window se
+// Local variable (x)	    Sirf usi function ke andar jaha declare hua
