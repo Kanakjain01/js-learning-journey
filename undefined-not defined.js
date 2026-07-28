@@ -38,3 +38,11 @@ a = 10;
 console.log(a); // 10
 a = "hello world";
 console.log(a); // hello world
+
+// Ye code ek important cheez dikhata hai — JavaScript mein ek variable ka data type fix nahi hota. Same variable a:
+
+// Pehle undefined tha
+// Phir number (10) ban gaya
+// Phir string ("hello world") ban gaya
+
+// var (aur let bhi) se declare kiya gaya variable, kisi bhi data type ki value hold kar sakta hai, aur time ke saath type change bhi kar sakta hai. Isi wajah se JavaScript ko "dynamically typed language" kaha jaata hai.
